@@ -98,6 +98,7 @@ public final class InventoryTask implements PipelineTask, AutoCloseable {
             public void onFailure(final Throwable throwable) {
                 log.error("dumper onFailure, taskId={}", taskId);
                 stop();
+                
                 close();
             }
         }));
